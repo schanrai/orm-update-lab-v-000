@@ -30,10 +30,12 @@ class Student
   def save
     #if self.id
     #self.update
-  else
+  #else
     sql =<<-SQL
-      INSERT INTO students ()
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
     SQL
+    DB[:conn].execute(sql, self.name, self.grade)
   end
 
 
