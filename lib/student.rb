@@ -53,6 +53,10 @@ end
     Student.new(result[0], result[1], result[2])
   end
 
+  def self.new_from_db
+    
+  end
+
 
   def self.create(name, grade)
     student_instance = Student.new(name, grade)
